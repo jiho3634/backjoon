@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+    int    size;
+    int    *arr;
+    int    v;
+    int    count;
+    int    i;
+    
+    scanf("%d", &size);
+    arr = (int *) malloc (sizeof(int) * size);
+    i = -1;
+    while (++i < size)
+        scanf("%d", &arr[i]);
+    scanf("%d", &v);
+    i = -1;
+    count = 0;
+    while (++i < size)
+    {
+        if (arr[i] == v)
+            count++;
+    }
+    printf("%d", count);
+    free (arr);
+    return (0);
+}
